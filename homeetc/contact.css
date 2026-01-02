@@ -1,0 +1,137 @@
+ * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        width: 100vw;
+        color: #333;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .info-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        width: 100vw;
+        height: auto;
+        padding: 100px;
+    }
+
+    header {
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 20px 0;
+        width: 100vw;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        z-index: 100;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #667eea;
+    }
+
+    nav a {
+        margin-left: 30px;
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s;
+    }
+
+    nav a:hover {
+        color: #667eea;
+    }
+
+.contact-section {
+    background-color: transparent;
+}
+
+.section-heading{
+    font-size: 25px;
+    color: rgba(240, 248, 255, 0.922);
+    -webkit-text-stroke: 1px black;
+}
+
+.contact-details{  
+    padding: 2rem;
+    color: #333;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-details p {
+    font-size: 18px;
+}
+
+@media (max-width: 600px) {
+    .contact-details {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-details p {
+        font-size: 16px;
+    }
+}
+
+
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.848);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccccccbd;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.contact-form button {
+    background-color: #667eea;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #5a67d8;
+}
+
+ footer {
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.348);
+        color: white;
+        padding: 30px;
+    }
