@@ -88,6 +88,28 @@
             color: white;
         }
 
+        .hero #rainbow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            font-weight: 700;
+            margin-bottom: 20px;
+                background: linear-gradient(90deg, 
+                #ff004d, #ff7300, #ffd500, #00c853, 
+                #00b0ff, #6a00ff, #ff004d);
+                background-size: 200% auto; 
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: rainbow 3s linear infinite;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
         .hero h1 {
             font-size: 48px;
             margin-bottom: 20px;
@@ -223,7 +245,12 @@
             }
         }
 
+<<<<<<< Updated upstream:hmtls/homecss.css
 #typing-text {
+=======
+
+        #typing-text {
+>>>>>>> Stashed changes:homeetc/homecss.css
     border-right: 3px solid rgba(255, 255, 255, 0.75); /* The cursor */
     white-space: nowrap;
     overflow: hidden;
@@ -237,6 +264,15 @@
     50% { border-color: white; }
 }
 
+<<<<<<< Updated upstream:hmtls/homecss.css
+=======
+@media (max-width: 600px) {
+    #typing-text {
+        white-space: normal; /* Allows text to wrap on small screens */
+        border-right: none;   /* Removes cursor if it interferes with wrapping */
+    }
+}
+>>>>>>> Stashed changes:homeetc/homecss.css
 
 #footer-typing-text {
     font-family: 'Courier New', Courier, monospace; /* Optional: typewriter font */
@@ -253,5 +289,9 @@
 
 #footer-typing-text.typing {
     animation: blink 0.7s step-end infinite;
+<<<<<<< Updated upstream:hmtls/homecss.css
 }
 
+=======
+}
+>>>>>>> Stashed changes:homeetc/homecss.css

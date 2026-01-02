@@ -397,6 +397,7 @@ window.addEventListener('load', function() {
 });
 
 
+<<<<<<< Updated upstream:hmtls/homejs.js
 
 const textElement = document.getElementById("typing-text");
 const textToType = "Your comprehensive Learning Management System for seamless education...";
@@ -413,6 +414,35 @@ function typeEffect() {
 // Start the animation when the page loads
 window.onload = typeEffect;
 
+=======
+// Configuration
+const heroText = "Empowering students through modern technology.";
+const footerTextContent = "© 2026 EduHub - Learning without boundaries.";
+const typingSpeed = 100;
+
+function typeEffect(elementId, text, speed) {
+    let i = 0;
+    const element = document.getElementById(elementId);
+    
+    function typing() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typing, speed);
+        } else {
+            // Remove the blinking cursor line when finished (optional)
+            element.style.borderRight = "none";
+        }
+    }
+    typing();
+}
+
+// Run when page loads
+window.onload = () => {
+    typeEffect("typing-text", heroText, typingSpeed);
+    typeEffect("footer-typing-text", footerText, 50);
+};
+>>>>>>> Stashed changes:homeetc/homejs.js
 
 // 1. Smooth Scrolling for Navigation Links
 document.querySelectorAll('nav a').forEach(anchor => {
@@ -440,7 +470,11 @@ const observerOptions = {
     threshold: 0.2
 };
 
+<<<<<<< Updated upstream:hmtls/homejs.js
 const observer = new IntersectionObserver((entries) => {
+=======
+const featureObserver = new IntersectionObserver((entries) => {
+>>>>>>> Stashed changes:homeetc/homejs.js
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
@@ -453,9 +487,29 @@ document.querySelectorAll('.feature-card').forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(20px)';
     card.style.transition = 'all 0.6s ease-out';
+<<<<<<< Updated upstream:hmtls/homejs.js
     observer.observe(card);
 });
 
+=======
+    featureObserver.observe(card);
+});
+
+const textElement = document.getElementById("typing-text");
+const textToType = "Your comprehensive Learning Management System for seamless education . . . . . ";
+let index = 0;
+
+function typeEffect() {
+    if (index < textToType.length) {
+        textElement.textContent += textToType.charAt(index);
+        index++;
+        setTimeout(typeEffect, 50); // Speed in milliseconds
+    }
+}
+
+// Start the animation when the page loads
+window.onload = typeEffect;
+>>>>>>> Stashed changes:homeetc/homejs.js
 
 const footerText = document.getElementById("footer-typing-text");
 const footerContent = "© 2026 DevSphere. All rights reserved.";
@@ -473,14 +527,26 @@ function typeFooter() {
 }
 
 // Observer to start typing when footer is visible
+<<<<<<< Updated upstream:hmtls/homejs.js
 const footerObserver = new IntersectionObserver((entries) => {
+=======
+const observer = new IntersectionObserver((entries) => {
+>>>>>>> Stashed changes:homeetc/homejs.js
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             footerText.classList.add('typing');
             typeFooter();
+<<<<<<< Updated upstream:hmtls/homejs.js
             footerObserver.unobserve(entry.target); // Run only once
+=======
+            observer.unobserve(entry.target); // Run only once
+>>>>>>> Stashed changes:homeetc/homejs.js
         }
     });
 }, { threshold: 0.5 });
 
+<<<<<<< Updated upstream:hmtls/homejs.js
 footerObserver.observe(footerText);
+=======
+observer.observe(footerText);
+>>>>>>> Stashed changes:homeetc/homejs.js
