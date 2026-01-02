@@ -102,7 +102,7 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            animation: rainbow 8s linear infinite;
+            animation: rainbow 7s linear infinite;
         }
 
         @keyframes rainbow {
