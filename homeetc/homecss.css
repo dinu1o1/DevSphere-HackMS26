@@ -89,7 +89,30 @@
         }
 
         .hero h1 {
-            font-size: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 80px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, 
+                #ff004d, #ff7300, #ffd500, #00c853, 
+                #00b0ff, #6a00ff, #ff004d);
+            background-size: 200% auto; 
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: rainbow 10s linear infinite;
+        }
+
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        .hero h1,
+        .hero h2 {
+            font-size: 80px;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
@@ -189,3 +212,41 @@
                 font-size: 16px;
             }
         }
+
+        #typing-text {
+    border-right: 3px solid rgba(255, 255, 255, 0.75); /* The cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block; /* Essential for the border-right to look like a cursor */
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+/* The blinking animation */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
+
+@media (max-width: 600px) {
+    #typing-text {
+        white-space: normal; /* Allows text to wrap on small screens */
+        border-right: none;   /* Removes cursor if it interferes with wrapping */
+    }
+}
+
+#footer-typing-text {
+    font-family: 'Courier New', Courier, monospace; /* Optional: typewriter font */
+    border-right: 2px solid white; /* The cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/* Cursor blinking animation */
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+#footer-typing-text.typing {
+    animation: blink 0.7s step-end infinite;
+}
