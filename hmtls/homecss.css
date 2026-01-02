@@ -83,7 +83,7 @@
         .hero {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 80px 20px;
+            padding: 200px 20px;
             text-align: center;
             color: white;
         }
@@ -93,6 +93,39 @@
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
+
+        .hero #rainbow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            background: #111;
+            font-size: 60px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg,
+            #ff004d,
+            #ff7300,
+            #ffd500,
+            #00c853,
+            #00b0ff,
+            #6a00ff,
+            #ff004d,
+            #ff004d);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: rainbow 3s linear infinite;
+        }
+
+        @keyframes rainbow {
+            0%{
+                background-position: 200% 0;
+
+            }
+        }
+
 
         .hero p {
             font-size: 20px;
@@ -189,3 +222,36 @@
                 font-size: 16px;
             }
         }
+
+#typing-text {
+    border-right: 3px solid rgba(255, 255, 255, 0.75); /* The cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block; /* Essential for the border-right to look like a cursor */
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+/* The blinking animation */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
+
+
+#footer-typing-text {
+    font-family: 'Courier New', Courier, monospace; /* Optional: typewriter font */
+    border-right: 2px solid white; /* The cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/* Cursor blinking animation */
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+#footer-typing-text.typing {
+    animation: blink 0.7s step-end infinite;
+}
+
