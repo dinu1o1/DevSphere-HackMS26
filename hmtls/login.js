@@ -25,7 +25,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
         message.textContent = "Login successful. Redirecting...";
 
         setTimeout(function () {
-            window.location.href = "home.html";
+            window.location.href = "homeland.html";
         }, 1000);
     } else {
         message.style.color = "red";
