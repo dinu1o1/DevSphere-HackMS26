@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EduHub - DashBoard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-50 font-display transition-colors duration-200">
+<div class="flex h-screen w-full overflow-hidden">
+<!-- Sidebar -->
+<aside class="flex w-64 flex-col justify-between border-r border-[#e7ebf3] bg-white dark:bg-slate-900 dark:border-slate-800 hidden md:flex">
+<div class="flex flex-col gap-4 p-4">
+<div class="flex items-center gap-3 px-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Abstract blue geometric shape logo" 
+style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDBFEec-l8j1ocKCZCH4eEJOtagRSB_gl2-p0evPW4WeXbfETBOt_UZfjYEUV5t5TjX7kvUQEXiTrQjUe8bw2dOQs0dmOBHIwXV2WDXs3txRhy-HiQNPn3ARqIbBMsPAvpxqbQUkF6wNqdLs83wtadr9mRKE782JWu6a-z43ERIDtOp27ccGhdW8E_e83Khn_JZy5BMHg8jpZ3gjbqjJ2L1zP-BOQ5GLurNKOQNB2RZK_tVU3m1yeKsjgsYbloWG-v09nlGV5lSmeg");'></div>
+<h1 class="text-[#0d121b] dark:text-white text-xl font-bold leading-normal">EduHub</h1>
+</div>
+<div class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">local_library</span>
+<p class="text-sm font-medium leading-normal" onclick="window.location.href ='login.html'">My Courses</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">calendar_month</span>
+<p class="text-sm font-medium leading-normal">Calendar</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">chat_bubble</span>
+<p class="text-sm font-medium leading-normal">Messages</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">school</span>
+<p class="text-sm font-medium leading-normal">Grades</p>
+</a>
+</div>
+</div>
+<div class="p-4">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-blue-700 transition-colors">
+<span class="truncate">Log Out</span>
+</button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex flex-1 flex-col h-full overflow-hidden bg-background-light dark:bg-background-dark">
+<!-- Top Navbar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7ebf3] bg-white dark:bg-slate-900 dark:border-slate-800 px-6 py-3 shrink-0">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-[#0d121b] dark:text-white md:hidden">
+<span class="material-symbols-outlined cursor-pointer">menu</span>
+</div>
+<h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] hidden md:block">Dashboard</h2>
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64 group">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-[#f0f2f5] dark:bg-slate-800 focus-within:ring-2 ring-primary/20 transition-all">
+<div class="text-[#4c669a] flex border-none items-center justify-center pl-4">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0d121b] dark:text-white focus:outline-0 border-none bg-transparent h-full placeholder:text-[#4c669a] px-3 text-sm font-normal leading-normal" placeholder="Search courses..."/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-8 items-center">
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-full size-10 hover:bg-slate-100 dark:hover:bg-slate-800 text-[#0d121b] dark:text-white transition-colors">
+<span class="material-symbols-outlined text-[24px]">notifications</span>
+</button>
+<button class="flex items-center justify-center rounded-full size-10 hover:bg-slate-100 dark:hover:bg-slate-800 text-[#0d121b] dark:text-white transition-colors">
+<span class="material-symbols-outlined text-[24px]">settings</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-white dark:ring-slate-700 cursor-pointer" data-alt="User profile picture of a young man smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB939bfW1wLYN6rO1nnYZeR6IcaWc6SfKonFC2ZRBeWNtLio7GwWxsN6_T_uv4wcBkU0A_cttTkfR7eeSSzfAPrjXDD9vDU8ZjmsDbufSyyQH__vOQ8nMICHhSIdJ9b6be780ln5qQPMigIfyoytmPz2_LOR5f7-DG-PQ8O_pDKwzS7U6NvZCU6xvfocpe5li5O2qDnxFMeZjiE4S3TMc68_ViHlARxjbj2aeedJoMg-iUpq4md3BDRiw88frqXleh2ytPsIR_OlyA");'></div>
+</div>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto p-4 md:p-8">
+<div class="mx-auto max-w-7xl flex flex-col gap-6">
+<!-- Heading -->
+<div class="flex flex-col gap-1">
+<h1 class="text-[#0d121b] dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Welcome back, Alex</h1>
+<p class="text-[#4c669a] dark:text-slate-400 text-base font-normal leading-normal">You have 3 assignments due this week.</p>
+</div>
+<!-- Stats Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="flex flex-col justify-between gap-4 rounded-xl p-6 bg-white dark:bg-slate-900 border border-[#e7ebf3] dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start">
+<p class="text-[#4c669a] dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Assignments Due</p>
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">assignment</span>
+</div>
+<p class="text-[#0d121b] dark:text-white text-3xl font-bold leading-tight">3</p>
+</div>
+<div class="flex flex-col justify-between gap-4 rounded-xl p-6 bg-white dark:bg-slate-900 border border-[#e7ebf3] dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start">
+<p class="text-[#4c669a] dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Recent Grade</p>
+<span class="material-symbols-outlined text-green-600 bg-green-100 p-2 rounded-lg">grade</span>
+</div>
+<p class="text-[#0d121b] dark:text-white text-3xl font-bold leading-tight">A-</p>
+</div>
+<div class="flex flex-col justify-between gap-4 rounded-xl p-6 bg-white dark:bg-slate-900 border border-[#e7ebf3] dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start">
+<p class="text-[#4c669a] dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Hours Studied</p>
+<span class="material-symbols-outlined text-orange-600 bg-orange-100 p-2 rounded-lg">schedule</span>
+</div>
+<p class="text-[#0d121b] dark:text-white text-3xl font-bold leading-tight">12h</p>
+</div>
+</div>
+<!-- Main Dashboard Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-4">
+<!-- Left Column: Courses -->
+<div class="lg:col-span-2 flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<h2 class="text-[#0d121b] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Continue Learning</h2>
+<a class="text-primary text-sm font-bold hover:underline" href="#">View All</a>
+</div>
+<!-- Course Card 1 -->
+<div class="flex flex-col sm:flex-row gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-[#e7ebf3] dark:border-slate-800 shadow-sm transition-transform hover:-translate-y-1 duration-200">
+<div class="w-full sm:w-48 aspect-video rounded-lg bg-cover bg-center shrink-0" data-alt="Laptop showing python code on screen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCREmdPQ6fRZzicT1CIxQbVFRo2---t3vwCFEu7ocnMrJjC3nNJoVHUXwK76VgugwbL83yPZAWNw3lXTagTMSNt2N_qQkT4Yh3wEKU61j84XN96TfO3XtHyDA2x9AeFCKPMBm51EPUwGeSWLFKmOKFtV_e--qzTiDioJdPaGRtrWyptyFL7-oYtNhjXTOoL5MwIqVS-x4t3jGzxi13VZkUsgZi3dl33bFK6C9jqWIhJVAN6LuPHZEpimtoFHiO8cvFS_jUJoAlfCro");'></div>
+<div class="flex flex-col flex-1 justify-between gap-3">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="text-[#0d121b] dark:text-white text-lg font-bold">Introduction to Python</h3>
+<span class="bg-blue-100 text-primary text-xs font-bold px-2 py-1 rounded">Module 3</span>
+</div>
+<p class="text-[#4c669a] dark:text-slate-400 text-sm mt-1">Dr. Sarah Jensen</p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-xs font-medium text-[#4c669a] dark:text-slate-400">
+<span>Progress</span>
+<span>75%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<button class="w-fit mt-2 text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+                                        Resume Course <span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="flex flex-col sm:flex-row gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-[#e7ebf3] dark:border-slate-800 shadow-sm transition-transform hover:-translate-y-1 duration-200">
+<div class="w-full sm:w-48 aspect-video rounded-lg bg-cover bg-center shrink-0" data-alt="Wireframe sketches and sticky notes on a wall" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBl6ry4uZtOA7c0IRBFs0gcyvM28n1fiAzX3JvN20slyAlhTnAUZsETx_5bmmx-GZEP8PvNZrX9tzfYiGlCm8Tz7_oYsewCevQDh5lc6qi9YZbaJQyR_J6SiL3ODNbTe__kNzMFjmMxlltuS66Fhdh3A_f8j1flRPI4u98iyU3ACN_STAFpKRlcOhXzNSabvm-BaSlnfGnw0Y3pJxsL8eufF1GkeFV9CVCFWiPx5WvUD7IRY-lCfJ0Z1Tga8h90VsHxT4gKPHwjl1k");'></div>
+<div class="flex flex-col flex-1 justify-between gap-3">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="text-[#0d121b] dark:text-white text-lg font-bold">UX Design Principles</h3>
+<span class="bg-purple-100 text-purple-600 text-xs font-bold px-2 py-1 rounded">Module 1</span>
+</div>
+<p class="text-[#4c669a] dark:text-slate-400 text-sm mt-1">Prof. Mark Alen</p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-xs font-medium text-[#4c669a] dark:text-slate-400">
+<span>Progress</span>
+<span>32%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-2">
+<div class="bg-purple-500 h-2 rounded-full" style="width: 32%"></div>
+</div>
+</div>
+<button class="w-fit mt-2 text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+                                        Resume Course <span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Sidebar Widgets -->
+<div class="flex flex-col gap-6">
+<!-- Assignments Widget -->
+<div class="rounded-xl bg-white dark:bg-slate-900 border border-[#e7ebf3] dark:border-slate-800 shadow-sm p-5">
+<h3 class="text-[#0d121b] dark:text-white text-lg font-bold mb-4">Upcoming Deadlines</h3>
+<div class="flex flex-col gap-4">
+<div class="flex gap-3 items-start">
+<div class="bg-red-50 text-red-500 rounded-lg p-2 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+<div>
+<p class="text-[#0d121b] dark:text-white font-medium text-sm">Python Basics Quiz</p>
+<p class="text-red-500 text-xs font-bold mt-0.5">Due Tomorrow</p>
+</div>
+</div>
+<div class="h-px bg-slate-100 dark:bg-slate-800 w-full"></div>
+<div class="flex gap-3 items-start">
+<div class="bg-slate-50 text-slate-500 dark:bg-slate-800 dark:text-slate-400 rounded-lg p-2 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">description</span>
+</div>
+<div>
+<p class="text-[#0d121b] dark:text-white font-medium text-sm">Usability Study Report</p>
+<p class="text-[#4c669a] dark:text-slate-400 text-xs mt-0.5">Due Oct 24</p>
+</div>
+</div>
+<div class="h-px bg-slate-100 dark:bg-slate-800 w-full"></div>
+<div class="flex gap-3 items-start">
+<div class="bg-slate-50 text-slate-500 dark:bg-slate-800 dark:text-slate-400 rounded-lg p-2 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</div>
+<div>
+<p class="text-[#0d121b] dark:text-white font-medium text-sm">Data Structs Project</p>
+<p class="text-[#4c669a] dark:text-slate-400 text-xs mt-0.5">Due Oct 28</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-4 py-2 text-sm text-[#4c669a] dark:text-slate-400 hover:text-primary dark:hover:text-primary font-medium transition-colors">View Calendar</button>
+</div>
+<!-- Notifications/Activity Widget -->
+<div class="rounded-xl bg-white dark:bg-slate-900 border border-[#e7ebf3] dark:border-slate-800 shadow-sm p-5">
+<h3 class="text-[#0d121b] dark:text-white text-lg font-bold mb-4">Recent Activity</h3>
+<div class="flex flex-col gap-4">
+<div class="flex gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 shrink-0" data-alt="Portrait of instructor wearing glasses" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDPGjKcpKaHCnnsruqEdMwqa9p_frnJBsb3W0UAuHHwH7XtPu1MApP7T-32_KkXXw5-Cgce3iz4ExLQEZW-eIAwNUMMKqPx7jKa2pthFeH6nNbUimDJI0vVusO-ieENd4CwKN-63_BLdsjQifGuXtjK5OlNHLhlh2jhBTbyY5Eyr3Aggj5jPotL-IPMgtH_deCr4HePanL_JgiNTH12pCCNClNWgrk2RXUpB1TnEivQqz1_N2KI5Oi7c6ec1U2PfH8_uO4oiTMZIMI");'></div>
+<div>
+<p class="text-[#0d121b] dark:text-white text-sm"><span class="font-bold">Prof. Jensen</span> posted a new announcement in <span class="font-medium text-primary">Intro to Python</span>.</p>
+<p class="text-[#4c669a] dark:text-slate-500 text-xs mt-1">2 hours ago</p>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 shrink-0 flex items-center justify-center bg-green-100 text-green-600">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<div>
+<p class="text-[#0d121b] dark:text-white text-sm">Assignment <span class="font-bold">Wireframes</span> graded: <span class="text-green-600 font-bold">A-</span></p>
+<p class="text-[#4c669a] dark:text-slate-500 text-xs mt-1">Yesterday</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

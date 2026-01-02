@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Courses - LearnHub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Lexend', sans-serif; }
+    </style>
+</head>
+<body class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark text-[#0d121b] dark:text-white overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7ebf3] bg-white dark:bg-[#1a2230] dark:border-[#2d3748] px-4 py-3 sm:px-10">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-[#0d121b] dark:text-white">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_543)">
+<path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clippath id="clip0_6_543"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">EduHub</h2>
+</div>
+<div class="hidden md:flex items-center gap-9">
+<a class="text-[#0d121b] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="">Dashboard</a>
+<a class="text-primary text-sm font-medium leading-normal" href="#">My Learning</a>
+<a class="text-[#0d121b] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Catalog</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<label class="hidden sm:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full border border-[#cfd7e7] dark:border-gray-700 bg-[#e7ebf3] dark:bg-gray-800 overflow-hidden">
+<div class="text-[#4c669a] flex border-none items-center justify-center pl-4 pr-2">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none bg-transparent text-[#0d121b] dark:text-white focus:outline-0 border-none h-full placeholder:text-[#4c669a] px-0 text-sm font-normal leading-normal" placeholder="Search courses..." value=""/>
+</div>
+</label>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-white dark:border-gray-700 shadow-sm cursor-pointer" data-alt="Portrait of the user Alex" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAIFzrVh04tbE6o-zh15OIUYn29cIiRgv0o1zP5NlZ7yXhHkNYgR-3yEtKjSXo3BATG6hkRvAcLtkTGk-iTvbBNrouA7F8U-VeL3onVSfr0igKFYNMafqV2lB6bAypwg-PI5NAzPrs1AQ8ay2GnuHENwf2IfdduHUs2-dcI-Aqn1Zt1Oih8CNHZv_xLdJaEkaqhbx9Wfo8rNDR_m-kpjLK1FvO9WDiVQxavT_SsKMYflPnxXx7uZ-MIhcaARsDnRmAMYKP94aVXx4E");'></div>
+</div>
+</header>
+<!-- Main Layout -->
+<div class="layout-container flex h-full grow flex-col items-center">
+<div class="w-full max-w-[1280px] px-4 md:px-10 py-8 flex flex-col gap-8">
+<!-- Page Heading & Welcome -->
+<div class="flex flex-wrap justify-between items-end gap-3">
+<div class="flex flex-col gap-2">
+<h1 class="text-[#0d121b] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">My Courses</h1>
+<p class="text-[#4c669a] dark:text-gray-400 text-base font-normal">Welcome back, Alex! You're making great progress.</p>
+</div>
+<button class="bg-white dark:bg-[#1a2230] text-[#0d121b] dark:text-white border border-[#cfd7e7] dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+                    View Schedule
+                </button>
+</div>
+<div class="flex flex-col lg:flex-row gap-8 items-start">
+<!-- Left Column: Content -->
+<div class="flex-1 flex flex-col gap-8 w-full">
+<!-- Hero: Resume Learning -->
+<div class="flex flex-col gap-4">
+<h3 class="text-lg font-bold text-[#0d121b] dark:text-white">Jump back in</h3>
+<div class="flex flex-col sm:flex-row items-stretch justify-between gap-6 rounded-xl bg-white dark:bg-[#1a2230] p-5 shadow-[0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-none border border-transparent dark:border-gray-800 hover:shadow-md transition-shadow">
+<div class="flex flex-[2_2_0px] flex-col justify-between gap-4">
+<div class="flex flex-col gap-2">
+<span class="inline-flex items-center gap-1 text-primary text-xs font-bold uppercase tracking-wider bg-primary/10 w-fit px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">bolt</span> Current
+                                    </span>
+<h2 class="text-[#0d121b] dark:text-white text-2xl font-bold leading-tight">Advanced React Patterns</h2>
+<p class="text-[#4c669a] dark:text-gray-400 text-sm">Module 4: Hooks and Context APIs</p>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex gap-4 justify-between items-end">
+<p class="text-[#0d121b] dark:text-gray-200 text-sm font-medium">75% Complete</p>
+</div>
+<div class="rounded-full bg-[#e7ebf3] dark:bg-gray-700 h-2 w-full overflow-hidden">
+<div class="h-full rounded-full bg-primary transition-all duration-500" style="width: 75%;"></div>
+</div>
+<button class="mt-2 flex w-fit cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-primary text-white hover:bg-blue-700 transition-colors h-10 px-6 text-sm font-bold leading-normal shadow-lg shadow-blue-500/30">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+                                        Resume Course
+                                    </button>
+</div>
+</div>
+<div class="hidden sm:block sm:w-1/3 lg:w-64 bg-center bg-no-repeat bg-cover rounded-lg shadow-inner" data-alt="Abstract code snippets and react logo glowing in blue" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDnNLuFC8v01AMo_8IyDBXk1Sqw7TqF17JLvlrUWr-oD2oaiCmplmDR2HdkJekzjz6UQ4_pw5btLiobM4EAfFIXXSQLeyWkbYacd0KdgOnzegdtsprVLvUYkw2FSig9JEX25wyUBGTcWe5YEEcfSiq6VDnjFPeZxMRV2MtB8Nqe_Evk2S7dHHnJqEDVGbrrBgXMaKqfbhNiC0pGDoQN39SX3Cr-fwa55GH4HjRccfhfP0xq1Gy5aw_r-SSh71OZs8DJMEHwbvLg_Uk");'></div>
+</div>
+</div>
+<!-- Tabs & Filters -->
+<div class="border-b border-[#cfd7e7] dark:border-gray-700">
+<div class="flex gap-8 overflow-x-auto">
+<a class="flex items-center gap-2 border-b-[3px] border-b-primary text-[#0d121b] dark:text-white pb-3 pt-2 whitespace-nowrap" href="#">
+<p class="text-sm font-bold tracking-[0.015em]">In Progress</p>
+<span class="bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">4</span>
+</a>
+<a class="flex items-center gap-2 border-b-[3px] border-b-transparent text-[#4c669a] dark:text-gray-400 hover:text-primary dark:hover:text-primary hover:border-b-primary/30 transition-all pb-3 pt-2 whitespace-nowrap" href="#">
+<p class="text-sm font-bold tracking-[0.015em]">Completed</p>
+</a>
+<a class="flex items-center gap-2 border-b-[3px] border-b-transparent text-[#4c669a] dark:text-gray-400 hover:text-primary dark:hover:text-primary hover:border-b-primary/30 transition-all pb-3 pt-2 whitespace-nowrap" href="#">
+<p class="text-sm font-bold tracking-[0.015em]">Saved/Wishlist</p>
+</a>
+</div>
+</div>
+<!-- Course Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group flex flex-col rounded-xl bg-white dark:bg-[#1a2230] shadow-[0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-none border border-transparent dark:border-gray-800 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+<div class="h-44 w-full bg-cover bg-center relative" data-alt="UX design sketches on a whiteboard with sticky notes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7P4xbTr2ZptqcaOOLM1HDwySrXiH8f181Hz24sMIbPvOyng6HR5_Ekoi0h49zRfUjFpbgfoXOUW1PX92jc27h6MURqEcKbFFdya92IApCApzu9fOvWpvvP2NqVr-WDJAFNcjpgEnQQ5O5Mh3ECquiofmCev6uNsAWIxPT13KiFXtdVKZpOlbJ8ggiCzFysufVfa_130NZwHS9So-G6X3Yy3j2Sa47Ds-9pT_jn0t9JenkzhJfh2dpDcG10BOsC1hL0qoyKhsEaMs");'>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<div class="p-5 flex flex-col flex-1 gap-4">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight line-clamp-2">UX Design Fundamentals</h3>
+</div>
+<p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal">Sarah Jenkins</p>
+</div>
+<div class="mt-auto flex flex-col gap-2">
+<div class="flex justify-between text-xs font-medium text-[#4c669a] dark:text-gray-400">
+<span>30% Complete</span>
+<span>3h remaining</span>
+</div>
+<div class="rounded-full bg-[#e7ebf3] dark:bg-gray-700 h-1.5 w-full">
+<div class="h-full rounded-full bg-primary" style="width: 30%;"></div>
+</div>
+<button class="mt-2 w-full py-2.5 rounded-lg border border-[#cfd7e7] dark:border-gray-600 text-[#0d121b] dark:text-white text-sm font-medium hover:bg-primary hover:text-white hover:border-primary transition-colors">
+                                        Continue
+                                    </button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col rounded-xl bg-white dark:bg-[#1a2230] shadow-[0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-none border border-transparent dark:border-gray-800 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+<div class="h-44 w-full bg-cover bg-center relative" data-alt="Laptop displaying data science charts and python code" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBJ6M215rnVDmnz8YatBco8KS-R8M5F89U5_RIbGfC4uk_XVsSos1s--gtjYlEj6EhybP6OEfwdM-UUzz_J9XpWlRSDyS7070efzvVITV4dn59MZkE6OHGhaDoeGk8UHe2KC7EfFCTwOTdONo98TTbJN6cgW6CywTJbGExQYI05OyA110eYNP-Zv2xNcmp6wiH6KJp12WrVdpQBct7mZuuWQgEzeuK1YQtV6bNgZh3Dq8_xfa2ZgzJPa81vInowUk5FtjTPfBBtoXQ");'>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<div class="p-5 flex flex-col flex-1 gap-4">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight line-clamp-2">Data Science 101</h3>
+</div>
+<p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal">Dr. Ali Connors</p>
+</div>
+<div class="mt-auto flex flex-col gap-2">
+<div class="flex justify-between text-xs font-medium text-[#4c669a] dark:text-gray-400">
+<span>Not Started</span>
+<span>12h total</span>
+</div>
+<div class="rounded-full bg-[#e7ebf3] dark:bg-gray-700 h-1.5 w-full">
+<div class="h-full rounded-full bg-primary" style="width: 0%;"></div>
+</div>
+<button class="mt-2 w-full py-2.5 rounded-lg bg-primary text-white text-sm font-medium hover:bg-blue-700 transition-colors shadow-md shadow-blue-500/20">
+                                        Start Course
+                                    </button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col rounded-xl bg-white dark:bg-[#1a2230] shadow-[0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-none border border-transparent dark:border-gray-800 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+<div class="h-44 w-full bg-cover bg-center relative" data-alt="Team meeting in a modern office discussing strategy" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDUjLtLi9yS9deI2iog7q49kpB0e_uXUhy1u0aKfyUthrViTL6cMEh4qbV4HWn7W4RkCrpLQjA4gLOF5hNGVtCJwLIVpuceTQp0YEXcHV4XwoyHe_iYrlw5MMzF3BtK-6NgF8fwBMcFL2MJuxkWz7IyDaIwpGUiaZLe-lhmMrexQZMLmjd7T1pcknzHtb8k4ftHEkehVkCgNfjs8F8t5yuL_Vp9AiJEOBXRuVk0H8jY6bc8ofWIUAXal-axB-LIEXpZ_XqCBJ7lChY");'>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+<div class="absolute top-3 right-3 bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Completed
+                                </div>
+</div>
+<div class="p-5 flex flex-col flex-1 gap-4">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight line-clamp-2">Business Communication</h3>
+</div>
+<p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal">Robert Fox</p>
+</div>
+<div class="mt-auto flex flex-col gap-2">
+<div class="flex justify-between text-xs font-medium text-green-600 dark:text-green-400">
+<span>Completed Oct 24, 2023</span>
+</div>
+<div class="rounded-full bg-[#e7ebf3] dark:bg-gray-700 h-1.5 w-full">
+<div class="h-full rounded-full bg-green-500" style="width: 100%;"></div>
+</div>
+<button class="mt-2 w-full py-2.5 rounded-lg border border-[#cfd7e7] dark:border-gray-600 text-[#0d121b] dark:text-white text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                                        Certificate
+                                    </button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group flex flex-col rounded-xl bg-white dark:bg-[#1a2230] shadow-[0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-none border border-transparent dark:border-gray-800 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+<div class="h-44 w-full bg-cover bg-center relative" data-alt="Close up of python code on a dark monitor" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDSLvOYyH4yXmOhIUj-A0zQe_vWENDhwuxK-zLZVjcbT6vdpW4-q2bBMti7Za4hO0VidPb9lLNDbi1zSX4O0s_7qojHjQG4zMuGSzfAIXV9j8vAgDHH4qpOnGPbbuX_FD0cQZxdIfrDNNYP-FtHn1AA0tnYp9Mtf7gCW328l0JYUeR2TIkWzKb2OG1-rcmnUpqRSrAUu_EnWRPDokP-QKvkP5oc3oa5pA00R5zsSiHNB6OLM_y8yuyzFvFmRZD8U4HcN-Ns-ljFG7k");'>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<div class="p-5 flex flex-col flex-1 gap-4">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight line-clamp-2">Advanced Python</h3>
+</div>
+<p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal">Esther Howard</p>
+</div>
+<div class="mt-auto flex flex-col gap-2">
+<div class="flex justify-between text-xs font-medium text-[#4c669a] dark:text-gray-400">
+<span>15% Complete</span>
+<span>5h remaining</span>
+</div>
+<div class="rounded-full bg-[#e7ebf3] dark:bg-gray-700 h-1.5 w-full">
+<div class="h-full rounded-full bg-primary" style="width: 15%;"></div>
+</div>
+<button class="mt-2 w-full py-2.5 rounded-lg border border-[#cfd7e7] dark:border-gray-600 text-[#0d121b] dark:text-white text-sm font-medium hover:bg-primary hover:text-white hover:border-primary transition-colors">
+                                        Continue
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Sidebar -->
+<aside class="w-full lg:w-80 flex flex-col gap-6 shrink-0">
+<!-- Stats Widget -->
+<div class="rounded-xl bg-white dark:bg-[#1a2230] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-none border border-transparent dark:border-gray-800">
+<h3 class="font-bold text-[#0d121b] dark:text-white mb-6">Learning Stats</h3>
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<div>
+<p class="text-2xl font-bold leading-none text-[#0d121b] dark:text-white">7</p>
+<p class="text-xs text-[#4c669a] dark:text-gray-400 mt-1 font-medium">Courses in progress</p>
+</div>
+</div>
+<div class="w-full h-px bg-[#e7ebf3] dark:bg-gray-700"></div>
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400">
+<span class="material-symbols-outlined text-[24px]">workspace_premium</span>
+</div>
+<div>
+<p class="text-2xl font-bold leading-none text-[#0d121b] dark:text-white">12</p>
+<p class="text-xs text-[#4c669a] dark:text-gray-400 mt-1 font-medium">Certificates earned</p>
+</div>
+</div>
+<div class="w-full h-px bg-[#e7ebf3] dark:bg-gray-700"></div>
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-600 dark:text-orange-400">
+<span class="material-symbols-outlined text-[24px]">timer</span>
+</div>
+<div>
+<p class="text-2xl font-bold leading-none text-[#0d121b] dark:text-white">48h</p>
+<p class="text-xs text-[#4c669a] dark:text-gray-400 mt-1 font-medium">Total learning time</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Recommended Widget -->
+<div class="rounded-xl bg-white dark:bg-[#1a2230] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-none border border-transparent dark:border-gray-800">
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-bold text-[#0d121b] dark:text-white">Recommended</h3>
+<a class="text-xs font-bold text-primary hover:underline" href="#">View All</a>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Rec Item 1 -->
+<a class="flex gap-3 group" href="#">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center shrink-0" data-alt="Abstract colorful gradient square" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCu1yeuETn-LifELbFRZTmiKelM3hZsXY1d94TBYdGmGL_LW4uBL0f1x8XxunojlCs7UuQ72Yee5ln8G8OpGo8MO3svVFgOcRn_kAWz8ZS3K57ZM-CHXpeFnT8lTl1-BPzsVtdt3-fD644lDd9ORAPfG82ebk-XKyIcsp2-g9uxQmXBYXZ_AccD6oJ-n51HF0gy_nl1LlNhGWfX0PM-37SUO99YFNIUseuCKD8skLeM93WSbKAZov0I9OCg941grA6239Kz-9Mrj4k");'></div>
+<div class="flex flex-col justify-center">
+<h4 class="text-sm font-bold text-[#0d121b] dark:text-white leading-tight group-hover:text-primary transition-colors line-clamp-2">Mastering Figma Auto Layout</h4>
+<p class="text-xs text-[#4c669a] dark:text-gray-400 mt-1">Design • 2h 15m</p>
+</div>
+</a>
+<!-- Rec Item 2 -->
+<a class="flex gap-3 group" href="#">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center shrink-0" data-alt="Geometric 3d render shapes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuApfcN2w7EpoYTq5ygkFVLqxe5RK20cO37p7twvCG-CwaBLytjEU4O5m9oY8-EMMbNIAK2JmPPCRNteppHs2nJmRqYkld1CcbmhF2tYpphXPpEOCGQxsZvS1UgZP5H6YTiE7gthNOjXFiiKInd5_3eSEb_WtdPU7-8gyctNBKN2nsTQpZm812oAlgWqW9ulOPQtsMg2yR9EUk7jv_9i5G4dIcqmeh8vom-kFl8Ct5Iflv5nPWgaI1Rgj3wtNCG06JXe8d0wQnSiq08");'></div>
+<div class="flex flex-col justify-center">
+<h4 class="text-sm font-bold text-[#0d121b] dark:text-white leading-tight group-hover:text-primary transition-colors line-clamp-2">Product Management 101</h4>
+<p class="text-xs text-[#4c669a] dark:text-gray-400 mt-1">Business • 5h 30m</p>
+</div>
+</a>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</div>
+</body></html>
