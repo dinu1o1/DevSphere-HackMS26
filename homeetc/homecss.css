@@ -9,10 +9,17 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             color: #333;
+            background-image: url(/lms/pngwing.com.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+            
         }
 
         header {
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: rgba(207, 207, 207, 0.692);
             padding: 20px 0;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
@@ -68,12 +75,12 @@
 
         .btn-login:hover {
             background-color: #667eea;
-            color: white;
+            color: rgb(179, 179, 179);
         }
 
         .btn-signup {
             background-color: #667eea;
-            color: white;
+            color: rgb(255, 255, 255);
         }
 
         .btn-signup:hover {
@@ -85,7 +92,7 @@
             margin: 0 auto;
             padding: 80px 20px;
             text-align: center;
-            color: white;
+            color: rgb(91, 88, 88);
         }
 
         .hero h1 {
@@ -130,19 +137,19 @@
         }
 
         .btn-primary {
-            background-color: white;
-            color: #667eea;
+            background-color: rgb(135, 135, 135);
+            color: #ffffff;
             font-weight: bold;
         }
 
         .btn-primary:hover {
-            background-color: #f1f0f0;
+            background-color: #636363;
         }
 
         .btn-secondary {
             background-color: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 2px solid white;
+            color: rgb(121, 121, 121);
+            border: 2px solid rgb(103, 103, 103);
         }
 
         .btn-secondary:hover {
@@ -188,7 +195,7 @@
 
         footer {
             background-color: rgba(0, 0, 0, 0.1);
-            color: white;
+            color: rgb(0, 0, 0);
             text-align: center;
             padding: 20px;
             margin-top: 60px;

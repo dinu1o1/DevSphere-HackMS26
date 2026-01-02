@@ -483,3 +483,18 @@ const footerObserver = new IntersectionObserver((entries) => {
 
 footerObserver.observe(footerText);
 
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // --- Start Animations ---
+    // Type hero text at 50ms per character
+    typeEffect(heroElement, heroText, 50, () => {
+        // Optional: Remove cursor after typing hero text
+        heroElement.style.borderRight = "none";
+    });
+
+    // Type footer text at 75ms per character
+    // We add the 'typing' class you defined in CSS for the blink animation
+    footerElement.classList.add('typing');
+    typeEffect(footerElement, footerText, 75);
+});
