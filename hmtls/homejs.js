@@ -398,6 +398,7 @@ window.addEventListener('load', function() {
 
 
 <<<<<<< Updated upstream:hmtls/homejs.js
+<<<<<<< Updated upstream:hmtls/homejs.js
 
 const textElement = document.getElementById("typing-text");
 const textToType = "Your comprehensive Learning Management System for seamless education...";
@@ -415,6 +416,8 @@ function typeEffect() {
 window.onload = typeEffect;
 
 =======
+=======
+>>>>>>> Stashed changes:homeetc/homejs.js
 // Configuration
 const heroText = "Empowering students through modern technology.";
 const footerTextContent = "© 2026 EduHub - Learning without boundaries.";
@@ -442,6 +445,9 @@ window.onload = () => {
     typeEffect("typing-text", heroText, typingSpeed);
     typeEffect("footer-typing-text", footerText, 50);
 };
+<<<<<<< Updated upstream:hmtls/homejs.js
+>>>>>>> Stashed changes:homeetc/homejs.js
+=======
 >>>>>>> Stashed changes:homeetc/homejs.js
 
 // 1. Smooth Scrolling for Navigation Links
@@ -471,7 +477,11 @@ const observerOptions = {
 };
 
 <<<<<<< Updated upstream:hmtls/homejs.js
+<<<<<<< Updated upstream:hmtls/homejs.js
 const observer = new IntersectionObserver((entries) => {
+=======
+const featureObserver = new IntersectionObserver((entries) => {
+>>>>>>> Stashed changes:homeetc/homejs.js
 =======
 const featureObserver = new IntersectionObserver((entries) => {
 >>>>>>> Stashed changes:homeetc/homejs.js
@@ -488,10 +498,13 @@ document.querySelectorAll('.feature-card').forEach(card => {
     card.style.transform = 'translateY(20px)';
     card.style.transition = 'all 0.6s ease-out';
 <<<<<<< Updated upstream:hmtls/homejs.js
+<<<<<<< Updated upstream:hmtls/homejs.js
     observer.observe(card);
 });
 
 =======
+=======
+>>>>>>> Stashed changes:homeetc/homejs.js
     featureObserver.observe(card);
 });
 
@@ -509,6 +522,9 @@ function typeEffect() {
 
 // Start the animation when the page loads
 window.onload = typeEffect;
+<<<<<<< Updated upstream:hmtls/homejs.js
+>>>>>>> Stashed changes:homeetc/homejs.js
+=======
 >>>>>>> Stashed changes:homeetc/homejs.js
 
 const footerText = document.getElementById("footer-typing-text");
@@ -528,7 +544,11 @@ function typeFooter() {
 
 // Observer to start typing when footer is visible
 <<<<<<< Updated upstream:hmtls/homejs.js
+<<<<<<< Updated upstream:hmtls/homejs.js
 const footerObserver = new IntersectionObserver((entries) => {
+=======
+const observer = new IntersectionObserver((entries) => {
+>>>>>>> Stashed changes:homeetc/homejs.js
 =======
 const observer = new IntersectionObserver((entries) => {
 >>>>>>> Stashed changes:homeetc/homejs.js
@@ -537,7 +557,11 @@ const observer = new IntersectionObserver((entries) => {
             footerText.classList.add('typing');
             typeFooter();
 <<<<<<< Updated upstream:hmtls/homejs.js
+<<<<<<< Updated upstream:hmtls/homejs.js
             footerObserver.unobserve(entry.target); // Run only once
+=======
+            observer.unobserve(entry.target); // Run only once
+>>>>>>> Stashed changes:homeetc/homejs.js
 =======
             observer.unobserve(entry.target); // Run only once
 >>>>>>> Stashed changes:homeetc/homejs.js
@@ -546,7 +570,11 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 <<<<<<< Updated upstream:hmtls/homejs.js
+<<<<<<< Updated upstream:hmtls/homejs.js
 footerObserver.observe(footerText);
+=======
+observer.observe(footerText);
+>>>>>>> Stashed changes:homeetc/homejs.js
 =======
 observer.observe(footerText);
 >>>>>>> Stashed changes:homeetc/homejs.js

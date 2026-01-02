@@ -246,7 +246,12 @@
         }
 
 <<<<<<< Updated upstream:hmtls/homecss.css
+<<<<<<< Updated upstream:hmtls/homecss.css
 #typing-text {
+=======
+
+        #typing-text {
+>>>>>>> Stashed changes:homeetc/homecss.css
 =======
 
         #typing-text {
@@ -265,13 +270,19 @@
 }
 
 <<<<<<< Updated upstream:hmtls/homecss.css
+<<<<<<< Updated upstream:hmtls/homecss.css
 =======
+=======
+>>>>>>> Stashed changes:homeetc/homecss.css
 @media (max-width: 600px) {
     #typing-text {
         white-space: normal; /* Allows text to wrap on small screens */
         border-right: none;   /* Removes cursor if it interferes with wrapping */
     }
 }
+<<<<<<< Updated upstream:hmtls/homecss.css
+>>>>>>> Stashed changes:homeetc/homecss.css
+=======
 >>>>>>> Stashed changes:homeetc/homecss.css
 
 #footer-typing-text {
@@ -290,8 +301,12 @@
 #footer-typing-text.typing {
     animation: blink 0.7s step-end infinite;
 <<<<<<< Updated upstream:hmtls/homecss.css
+<<<<<<< Updated upstream:hmtls/homecss.css
 }
 
+=======
+}
+>>>>>>> Stashed changes:homeetc/homecss.css
 =======
 }
 >>>>>>> Stashed changes:homeetc/homecss.css
