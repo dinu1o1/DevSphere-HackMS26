@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>My Profile</title>
+    <link rel="stylesheet" href="myinfo.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">EduHub</div>
+            <nav>
+                <a href="homeland.html">Features</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+    <div class="profile-card">
+        <div class="pic">
+            <img id="avatarImg" class="avatar" src="https://via.placeholder.com/140x140.png?text=Profile" alt=" ">
+        </div>
+        <div class="info">
+            <h2 id="displayName">User Account</h2>
+
+            <div id="editForm" class="hidden">
+                <div class="row">
+                    <div class="label">Full Name</div>
+                    <div class="value">
+                        <input id="inpName" type="text" placeholder="Full Name">
+                    </div>
+                </div>
+                <form>
+                    <div class="row">
+                    <div class="label">Email</div>
+                    <div class="value">
+                       <input id="inpEmail" type="email" placeholder="Email" required>
+                    </div>
+                </div>
+                </form>
+            
+                <div class="row">
+                    <div class="label">User ID</div>
+                    <div class="value">
+                        <input id="inpUserId" type="text" placeholder="User ID" maxlength="10">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label">Mobile</div>
+                    <div class="value">
+                        <input type="number" id="inpMobile" title="Enter a valid phone number" placeholder="Mobile">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label">Gender</div>
+                    <div class="value">
+                        <select id="inpGender">
+                            <option value="">Prefer not to say</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Prefer not to say</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="editBtn">Edit</button>
+                <button id="saveBtn" class="hidden">Save</button>
+                <button id="changePicBtn" type="button" class="secondary">Change Picture</button>
+                <input id="fileInput" type="file" accept="image/*" class="hidden">
+            </div>
+            <p id="message"></p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2026 DevSphere. All rights reserved.</p>
+    </footer>
+    <script src="myinfo.js"></script>
+
+</body>
+</html>
